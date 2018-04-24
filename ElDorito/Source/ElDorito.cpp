@@ -329,6 +329,8 @@ void ElDorito::OnMainMenuShown()
 {
 	if (GameHasMenuShown)
 		return;
+	Modules::ModuleGame::Instance().UpdateMapList();
+	Modules::ModuleGame::Instance().UpdateCustomMapList();
 	GameHasMenuShown = true;
 	executeCommandQueue = true;
 	if (isDedicated)
